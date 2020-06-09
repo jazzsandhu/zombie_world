@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="animation_game.css">
+	<link href="https://fonts.googleapis.com/css?family=Griffy&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/924a6b68b4.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title>Zombie World</title>
+	<script src="animation_game.js"></script>
+</head>
+<body>
+	<header id="header">
+		<div id="logo">
+			<a href="index.html"><img id="pic" src="skull.jpg" alt="a pic for logo"></a>
+		</div>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="animation_game.html">Zombie World</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</header>
+	<div id="play">Play Again</div>
+	<main id="game">
+		<div id="score">Your Score: <span id="scorenumber"></span></div>
+		<div id="timer">
+			<div id="timer1"></div>
+		</div>
+		<div id="area">
+			<div id="start"></div>
+			<div id="zombie"><i class="fas fa-skull"></i>
+				<div class="go"></div>
+			</div>
+		</div>
+		<div id="jump"></div>
+		<div id="walk"></div>
+		<div id="power">
+			<i class="fas fa-dragon"></i>
+	    </div>
+	    <audio controls id="audio">
+	    	<source src="jump.mp4">
+	    </audio>
+	</main>
+	<footer id="footer">
+		&copy;Zombie Space.
+
+	</footer>
+</body>
+</html>

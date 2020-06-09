@@ -1,0 +1,214 @@
+html{
+	box-sizing: border-box;
+}
+*,*::before, *::after{
+	box-sizing: inherit;
+}
+body{
+	background-color: grey;
+
+}
+/************************************************/
+/*header part */
+
+#header{
+	background-color: black;
+	width:100%;
+	height:200px;
+	position:relative;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+}
+
+#pic{
+	display: inline;
+	width:5em;
+	margin-top:1em;
+	margin-left:1em;
+}
+#header ul{
+	color:white;
+}
+#header li{
+	text-decoration: none;
+	display: inline;
+	margin-left:30px;
+	margin-top: 1em;
+	font-size: 30px;
+	font-family: 'Griffy';
+}
+#header li:first-child{
+	margin-left:60%;
+}
+#header a{
+	text-decoration: none;
+	color:white;
+}
+/***************************************************/
+/* home part*/
+#home{
+	border:2px solid grey;
+	width:500px;
+	height:00px;
+	margin:2em;
+	margin-left:35%;
+
+}
+#halfcircle{
+	width:300px;
+	height:150px;
+	border-radius: 150px 150px 0 0;
+	background: linear-gradient(black, white);
+	position: absolute;
+}
+.eye1{
+	width:40px;
+	height: 40px;
+	border-radius: 50PX / 40PX;
+	background-color: black;
+	margin-left: 60px;
+	display: block;
+	position:relative;
+	/*padding-top:20px; change the position of eye ball*/
+	margin-top:50px;
+}
+.eye{
+	height: 10px;
+	width:20px;
+	border-radius: 50%;
+	background-color: white;
+	margin:10px;
+}
+.eye2{
+	width:30px;
+	height:30px;
+	border-radius:50px / 40px;
+	background-color: black;
+	margin-right: 60px;
+	float: right;
+}
+#trap{
+	border-top: 100px solid white;
+	border-left:70px solid transparent;
+	border-right:70px solid transparent;
+	height: 0;
+	width:300px;
+	position: relative;
+	margin-top:9.3em;
+}
+.nose{
+	width: 0;
+	height:0;
+	border-left:20px solid transparent;
+	border-right:20px solid transparent;
+	border-bottom: 40px solid black;
+	border-radius: 50%;
+	margin-top:-7em;
+	margin-left:60px;
+}
+.mouth{
+	overflow: hidden;
+	position: relative;
+	width:200px;
+	height:50px;
+	margin-left:4.3em;
+	margin-top: -20px;	
+}
+.curly{
+	position: absolute;
+	background: radial-gradient(ellipse, transparent, transparent 7px, black 7px, black 10px, transparent 11px);
+	background-size: 36px 40px;
+	width:150px;
+	height: 20px;
+}
+.curly2{
+	top:20px;
+	left:18px;
+	background-position: 0px -20px;
+}
+#mouth2{
+	margin-top:-50px;
+	animation:openmouth 2s infinite alternate cubic-bezier(.08,.08,1,1) both;
+	/*overlapping each other*/
+}
+@keyframes openmouth{
+	0%{
+		margin-top:-50px;
+	}
+	50%{
+		margin-top:-20px;
+	}
+	100%{
+		margin-top:0px;
+	}
+}
+#trap2{
+	border-top: 80px solid white;
+	border-left:50px solid transparent;
+	border-right:50px solid transparent;
+	height: 0;
+	width:153px;
+	position: relative;
+	margin-left: 4.5em;
+	margin-top:-25px;
+}
+/*Footer part*/
+
+#footer{
+	background-color: black;
+	width:100%;
+	height:200px;
+	clip-path: polygon(100% 100%, 0 100%, 0 0, 100% calc(100% - 5vw));
+	position: relative;
+	margin-top:1em;
+	margin-bottom: 0;
+	color:white;
+	padding-top:10em;
+	padding-left:3px;
+}
+/* form tag*/
+#form{
+	margin-left: 30%;
+	font-family: 'Griffy';
+	position: relative;
+	margin-top:30%;
+	font-size: 30px;
+	font-weight: bolder;
+}
+#enter{
+	background-color: transparent;
+	border:1px solid black;
+	font-size: 30px;
+	font-family: 'Griffy';
+	margin-left: 18%;
+	box-shadow: 5px 5px 2px 1px rgba(0, 0, 0)
+	
+}
+#enter:hover{
+	transform: scaleY(2);
+	color:crimson;
+	border-color: crimson;
+	box-shadow:5px 5px 2px 1px rgba(214, 69, 65, 1);
+}
+
+@media screen and (max-width:768px){
+	#header li:first-child{
+		margin-left:20%;
+	}
+	#form{
+		margin-top: 60%;
+	}
+
+}
+@media screen and (max-width:480px){
+	#header li{
+		display:inline-block;
+		margin-top:-20px;
+
+	}
+	#form{
+		margin-top:90%;
+	}
+	#home{
+		margin-left:20%;
+	}
+}

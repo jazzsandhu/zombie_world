@@ -1,0 +1,277 @@
+html{
+	box-sizing: border-box;
+}
+*,*::before, *::after{
+	box-sizing: inherit;
+}
+body{
+	background-color: grey;
+
+}
+/************************************************/
+/*header part */
+
+#header{
+	background-color: black;
+	width:100%;
+	height:200px;
+	position:relative;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+}
+
+#pic{
+	display: inline;
+	width:5em;
+	margin-top:1em;
+	margin-left:1em;
+}
+#header ul{
+	color:white;
+}
+#header li{
+	text-decoration: none;
+	display: inline;
+	margin-left:30px;
+	margin-top: 1em;
+	font-size: 30px;
+	font-family: 'Griffy';
+}
+#header li:first-child{
+	margin-left:60%;
+}
+#header a{
+	text-decoration: none;
+	color:white;
+}
+/* game area css*/
+/***********************************************/
+#score{
+	color:red;
+	font-size: 30px;
+	margin-bottom: -40px;
+	margin-left:10px;
+}
+#area{
+	border:2px solid black;
+	height: 500px;
+	padding-top:-100px;
+	width:100%;
+	background-repeat:repeat;
+	background-image: url('background3.jpg');
+	animation:backgroundmove 50s 1 forwards linear ;
+	animation-duration: 30s;
+	animation-delay:3s;
+}
+@keyframes backgroundmove{
+	0%{
+		background-position: 0px 0px;
+	}
+	100%{
+		background-position: -10000px 0px;
+	}
+}
+#play{
+	background-color: transparent;
+	border:1px solid black;
+	font-size: 30px;
+	font-family: 'Griffy';
+	box-shadow: 5px 5px 2px 1px rgba(0, 0, 0);
+	margin:1em;
+	width:20%;
+	padding:20px;
+}
+#timer{
+	background-color:black;
+	height: 100px;
+	width:15em;
+	float: right;
+}
+#timer1{
+	width:10em;
+	height:30px;
+	background-color:white;
+	margin:2em;
+	animation:timer 0s 1 forwards linear;
+	animation-duration: 30s;
+	animation-delay: 3s;
+}
+@keyframes timer{
+	0%{
+		background-color: yellow;
+		width:10em;
+	}
+	50%{
+		background-color: orange;
+		width:5em;
+	}
+
+	100%{
+		background-color:red;
+		width:0;
+	}
+}
+#start{
+	font-weight: bolder;
+	color:red;
+	font-size: 30px;
+	margin-left:50%;
+	position: relative;
+}
+#zombie{
+	font-size:60px;
+	color:red;
+	margin-top:6em;
+	margin-left:3em;
+}
+.go{
+	animation:walk 1s 1 forwards linear ;
+	animation-delay: 0;
+}
+@keyframes walk{
+	0%{
+		margin-top:6em;
+	}
+	50%{
+		margin-top:3em;
+	}
+	100%{
+		margin-top:6em;
+	}
+}
+#power{
+	color:red;
+	font-size: 30px;
+	margin-top:-6em;
+	margin-left:-10em;
+}
+.power1{
+	animation:dragon 1s 1 forwards linear;
+	margin-left: -10em;
+}
+@keyframes dragon{
+	0%{
+		margin-left:-10em;
+	}
+	50%{
+		margin-left:3em;
+	}
+	100%{
+		margin-left:7em;
+	}
+}
+#jump{
+	height:0;
+	width:0px;
+	border-left:50px solid transparent;
+	border-right:50px solid transparent;
+	border-bottom: 100px solid blue;
+	float: right;
+	margin:3em;
+	margin-top:-10em;
+	margin-right:10em;
+}
+#walk{
+	height:0;
+	width:0;
+	border-top:50px solid transparent;
+	border-left:100px solid blue;
+	border-bottom: 50px solid transparent;
+	float:right;
+	margin-top:-10em;
+	margin-right:3em;
+}
+#audio{
+	display: none;
+}
+#footer{
+	background-color: black;
+	width:100%;
+	height:200px;
+	clip-path: polygon(100% 100%, 0 100%, 0 0, 100% calc(100% - 5vw));
+	position: relative;
+	margin-top:20%;
+	margin-bottom: 0;
+	color:white;
+	padding-top:10em;
+	padding-left:3px;
+}
+@media screen and (max-width:768px){
+	#header li:first-child{
+		margin-left:20%;
+	}
+	#footer{
+		margin-top:35%;
+	}
+
+}
+@media screen and (max-width:480px){
+	#header li{
+		display:block;
+		margin-top:-10px;
+		font-size:25px;
+	}
+	#start{
+		display: none;
+	}
+	#zombie{
+		margin-left:1em;
+		margin-top:7em;
+	}
+	.go{
+	animation:walk 1s 1 forwards linear ;
+	animation-delay: 0;
+    }
+    @keyframes walk{
+    	0%{
+		margin-top:7em;
+	    }
+	    50%{
+		margin-top:3em;
+	    }
+	    100%{
+		margin-top:7em;
+	    }
+	
+    }
+    #power{
+    	margin-left:-5em;
+    }
+    .power1{
+	animation:dragon 1s 1 forwards linear;
+	margin-left: -5em;
+    }
+    @keyframes dragon{
+	0%{
+		margin-left:-5em;
+	}
+	50%{
+		margin-left:5px;
+	}
+	100%{
+		margin-left:60px;
+	}
+    }
+    #play{
+    	font-size: 20px;
+    }
+    #jump{
+    	border-left:25px solid transparent;
+	    border-right:25px solid transparent;
+	    border-bottom:50px solid blue;
+	    margin-top:-5em;
+	    float:left;
+	    margin-left:16em;
+    }
+    #walk{
+    	border-top:25px solid transparent;
+	    border-left:50px solid blue;
+	    border-bottom: 25px solid transparent;
+	    margin-top:-6em;
+	    margin-right:3em;
+	    float: right;
+
+    }
+    #footer{
+    	margin-top:80%;
+    }
+}
